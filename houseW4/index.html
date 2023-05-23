@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HouseWarmth</title>
+        <link rel="stylesheet" href="https://unpkg.com/tippy.js@6/animations/scale.css"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/themes/classic.min.css"/>
+        <link rel="stylesheet" href="stylish.css">
+    </head>
+    <body>
+        <header>
+            <canvas id="can1"></canvas>
+            <nav id="navi">
+                <span id="title">housewarmth.com</span>
+            </nav>
+            <nav id="navlower">
+                <a class="navbtns" id="homebtn">⌂</a>   
+                <div id="menu">
+                    <ul class="dropmenu">
+                        <li>
+                            <a id="menubtnhov" href="#">☰</a>
+                            <ul class="sub">
+                                <li id="portbtn"><a id="gamebtnhov" href="#">Portfolio</a></li>
+                                <li id="resumebtn"><a  id="resumebtnhov" href="#">Resume</a></li>
+                                <li id="gallerybtn"><a  id="gallerybtnhov" href="#">Gallery</a></li>
+                                <li id="star"><a id="starbtnhov" href="#">A*</a></li>
+                                <li id="setbtn"><a id="setbtnhov" href="#">⚙</a></li>
+                                <ul class="sub">         
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        
+        <div id="main">
+
+            <div id="home">
+
+                <span>
+                    Welcome. <br><br>
+                    This website was <br><br>built to showcase<br><br>JavaScript animations 
+                    <br><br>and other portfolio pieces.<br><br>  
+                </span>
+                <img id="pipefire" src="art/pipefire.gif"></img>
+            </div>
+            
+            <div id="game-wrapper">
+                <nav id="portnav">
+                    <a class="portbtns" id="hwgame">Game</a> 
+                    <a class="portbtns" id="hwflashpdf">flashpdf</a>  
+                    <a class="portbtns" id="hwastar">pathfinder</a>  
+                </nav>
+
+                <div id="game" class="portsections">
+                    <span>
+                        This is a puzzle game;<br>play using your arrow keys.
+                    </span>
+                    <canvas id="hwcanvas"></canvas><span><br><br></span>
+                    <audio src="soundfx/midi_jams_v2.mp3" id="theme_song"></audio>
+                    <audio src="soundfx/teleport.wav" id="teleport"></audio>
+                    <audio src="soundfx/collision.mp3" id="collision"></audio>
+                </div>
+
+                <div id="flashpdf" class="portsections">
+                    <p>test flashpdf</p>
+                </div>
+
+                <div id="pathfinder" class="portsections">
+                    <p>A* Pathfinding Algorithm Visualizer;</p>
+                    <p id="outcome">Click the purple squares to build a maze.</p>
+                    <canvas id='maze' width='400' height='400'></canvas>
+                    <span><br></span>
+                    <div id="mazebtns">
+                        <button class="mazebtn" onclick = "solveMaze()">Solve</button>
+                        <button class="mazebtn" onclick = "reset()">Reset</button>
+                    </div>
+                </div>
+             
+             
+              
+            </div>
+
+            <div id="resume"></div>
+            <div id="astar"></div>
+
+            <div id="settings">
+                
+                <div id="themenav">
+                    <button id="darktheme">dark theme</button>
+                    <button id="lighttheme">light theme</button>
+                </div>
+
+                <span><br>edit accent style<br></span>
+                <div class="color-picker"></div>
+
+            </div>
+
+            <div id="gallery">
+                <span><br><br>coming soon<br><br></span>
+            </div>
+            
+        </div>
+
+            <span id="vers">© 2023 | Version 4.1.0 | github @nathvnt<br><br><br><br></span>
+
+<!-- javascript -->
+
+        <script src="https://unpkg.com/@popperjs/core@2/dist/umd/popper.min.js"></script>
+        <script src="https://unpkg.com/tippy.js@6/dist/tippy-bundle.umd.js"></script>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@simonwep/pickr/dist/pickr.min.js"></script>
+
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js" 
+            integrity="sha512-8Wy4KH0O+AuzjMm1w5QfZ5j5/y8Q/kcUktK9mPUVaUoBvh3QPUZB822W/vy7ULqri3yR8daH3F58+Y8Z08qzeg==" 
+            crossorigin="anonymous">
+        </script>
+
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js" 
+            integrity="sha512-lJDBw/vKlGO8aIZB8/6CY4lV+EMAL3qzViHid6wXjH/uDrqUl+uvfCROHXAEL0T/bgdAQHSuE68vRlcFHUdrUw==" 
+            crossorigin="anonymous">
+        </script>
+
+        <script 
+            src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" 
+            integrity="sha512-UxP+UhJaGRWuMG2YC6LPWYpFQnsSgnor0VUF3BHdD83PS/pOpN+FYbZmrYN+ISX8jnvgVUciqP/fILOXDjZSwg==" 
+            crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+        
+        <script src="sitefunctions.js"></script>
+        <script src="javadance.js"></script>
+        <script src="hwgame.js"></script>
+        <script src="mazerunner.js"></script>
+            
+    </body>
+</html>
