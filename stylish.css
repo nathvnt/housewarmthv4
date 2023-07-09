@@ -464,14 +464,31 @@ nav ul.sub li ul.sub {
     height: 340px;
     border: 1px solid black;
   }
+
+    #switch,
+  label[for="switch"] {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+  }
 }
+
 
 @media (min-width: 1024px) {
   #hwcanvas{
     display: none;
-    width: 400px;
-    height: 400px;
+    width: 480px;
+    height: 480px;
     border: 1px solid black;
+  }
+
+    #switch,
+  label[for="switch"] {
+      position: absolute;
+      right: 20%;
+      top: 50%;
+      transform: translateY(-50%);
   }
 }
 
@@ -519,11 +536,11 @@ label:active:after {
   width: 0;
 }
 
-#switch,
+/* #switch,
 label[for="switch"] {
     position: absolute;
     right: 34%;
     top: 50%;
     transform: translateY(-50%);
-}
+} */
 
